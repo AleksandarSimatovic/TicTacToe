@@ -42,14 +42,18 @@ class TicTacToeGame:
                 if x == x2 and y == y2:
                     if self.board[x][y] != self.sign_at_start:
                         if self.board[0][y] == self.board[1][y] and self.board[0][y] == self.board[2][y]:
+                            print("a")
                             return self.find_winner(x, y)
                         if self.board[x][0] == self.board[x][1] and self.board[x][0] == self.board[x][2]:
+                            print("b")
                             return self.find_winner(x, y)
                         if x == y:
                             if self.board[0][0] == self.board[1][1] and self.board[0][0] == self.board[2][2]:
+                                print("c")
                                 return self.find_winner(x, y)
                         if x + y == self.size - 1:
-                            if self.board[0][0] == self.board[1][1] and self.board[0][2] == self.board[2][0]:
+                            if self.board[0][2] == self.board[1][1] and self.board[0][2] == self.board[2][0]:
+                                print("d")
                                 return self.find_winner(x, y)
                         return 0
 
